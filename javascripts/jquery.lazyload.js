@@ -46,11 +46,12 @@
         /* Fire one scroll event per scroll. Not one scroll event per image. */
         var elements = this;
         if (0 == settings.event.indexOf("scroll")) {
-            $(settings.container).bind(settings.event, function(event) {
+            var scrollHandler = function(event) {
                 var counter = 0;
                 elements.each(function() {
                     $this = $(this);
-                    if (settings.skip_invisible && !$this.is(":visible")) return;
+                    if (settings.skip_invisible && !$this.parent().is(":visible")) return;
+
                     if ($.abovethetop(this, settings) ||
                         $.leftofbegin(this, settings)) {
                             /* Nothing. */
@@ -63,6 +64,11 @@
                         }
                     }
                 });
+            }
+
+            $(settings.container).bind(settings.event, function(event) {
+                clearTimeout($(this).data('timeout'));
+                $(this).data('timeout', setTimeout(scrollHandler, 200));
             });
         }
                 
