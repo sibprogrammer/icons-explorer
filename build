@@ -1,0 +1,21 @@
+#!/bin/sh
+
+function find_icons {
+    local ICONS_DIR=$1
+    local ICONS_VAR=$2
+    local FILES=`find $ICONS_DIR -name "*.png"`
+
+    echo -n "var $ICONS_VAR = [" >> index.html
+    for FILE in $FILES; do
+        BASENAME=`basename $FILE | sed 's/.png//'`
+        echo -n "'$BASENAME'," >> index.html
+    done 
+    echo "''];" >> index.html
+}
+
+cd `dirname $0`
+
+cat templates/header.html > index.html
+find_icons "./icons/fatcow/16x16" "fatcowIconsNames"
+find_icons "./icons/famfamfam/16x16" "famfamfamIconsNames"
+cat templates/footer.html >> index.html
