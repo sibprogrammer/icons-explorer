@@ -1,7 +1,7 @@
 $(function() {
   
   var createIcons = function(iconsNames, iconsContainer, iconsDir, hasBigIcons) {
-    var iconsBlock = $('<div class="icons"/>');
+    var iconsBlock = $('<div class="icons clearfix"/>');
     $(iconsNames).each(function(index, iconName) {
       if ('' === iconName) return;
 

@@ -1,11 +1,16 @@
 body { font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; font-size:13px; font-weight: normal; line-height: 18px; }
 h1 img { vertical-align: middle; }
-.icons:after { content: '.'; display: block; height: 0; clear: both; visibility: hidden; }
+.clearfix:after { content: '.'; display: block; height: 0; clear: both; visibility: hidden; }
 .icon { width: 180px; float: left; white-space: nowrap; padding: 2px; overflow: hidden; text-overflow: ellipsis; }
 .icon img { vertical-align: middle; padding: 0 6px 0 0; }
-.filter { padding: 10px; }
+.filter { padding: 10px; float: left; width: 240px; }
 #filter { margin: 0 0 0 10px; }
+.loading { width: 16px; height: 16px; }
 img#progress { vertical-align: middle; }
+ul { display: block; float: left; position: relative; left: 0; margin: 0 10px 0 0; padding: 0; }
+li { display: block; float: left; padding: 0 0 0 10px; }
+.sets-links { display: block; float: left; padding: 10px; }
+.sets-links span { display: block; float: left; }
 a { color: #0069d6; text-decoration: none; cursor: pointer; }
 a:hover { color: #00438a; text-decoration: none; }
 #image-details { display: none; }
