@@ -10,7 +10,7 @@ favorite browser.
 
 ## License
 
-Project licensed under the GPLv3 license.
+Project is licensed under the GPLv3 license.
 See http://www.gnu.org/licenses/gpl.html
 
 Icons sets are licensed under the separate licenses. See corresponding LICENSE
