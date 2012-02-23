@@ -40,10 +40,12 @@ $(function() {
     $('#progress').hide();
   }
 
-  $('#filter').on('keyup', function() {
-    $('#progress').show();
-    clearTimeout($(this).data('timeout'));
-    $(this).data('timeout', setTimeout(searchHandler, 500));
+  $('#filter').on('keyup', function(e) {
+    if (13 == e.which) {
+      $('#progress').show();
+      clearTimeout($(this).data('timeout'));
+      $(this).data('timeout', setTimeout(searchHandler, 50));
+    }
   });
 
   $('.icon a').on('click', function() {
