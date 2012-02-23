@@ -17,5 +17,7 @@ cd `dirname $0`
 
 cat templates/header.html > index.html
 find_icons "./icons/fatcow/16x16" "fatcowIconsNames"
+find_icons "./icons/fugue/16x16" "fugueIconsNames"
+find_icons "./icons/led/16x16" "ledIconsNames"
 find_icons "./icons/famfamfam/16x16" "famfamfamIconsNames"
 cat templates/footer.html >> index.html

@@ -14,6 +14,8 @@ $(function() {
   }
 
   createIcons(fatcowIconsNames, '#fatcow-icons', 'fatcow', true);
+  createIcons(fugueIconsNames, '#fugue-icons', 'fugue', false);
+  createIcons(ledIconsNames, '#led-icons', 'led', false);
   createIcons(famfamfamIconsNames, '#famfamfam-icons', 'famfamfam', false);
 
   $("img.lazy").lazyload();
