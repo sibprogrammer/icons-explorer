@@ -57,11 +57,13 @@ $(function() {
     smallIcon.removeClass('lazy');
     smallIcon.addClass('icon-details-small');
     $('#icon-details').append(smallIcon);
+    smallIcon.wrap('<a href="' + smallIcon.prop('src') + '" target="_blank"/>');
 
     if (smallIcon.hasClass('has-big-icon')) {
-      var bigIcon = smallIcon.clone().width(32).height(32)[0];
-      bigIcon.src = bigIcon.src.replace('16x16', '32x32');
-      $('#icon-details').append($(bigIcon).removeClass('icon-details-small').addClass('icon-details-big'));
+      var bigIcon = smallIcon.clone().width(32).height(32);
+      bigIcon.prop('src', bigIcon.prop('src').replace('16x16', '32x32'));
+      $('#icon-details').append(bigIcon.removeClass('icon-details-small').addClass('icon-details-big'));
+      bigIcon.wrap('<a href="' + bigIcon.prop('src') + '" target="_blank"/>');
     }
 
     $('#icon-details').dialog({ modal: true, width: 250, resizable: false });

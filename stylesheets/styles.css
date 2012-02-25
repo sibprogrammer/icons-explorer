@@ -13,8 +13,10 @@ li { display: block; float: left; padding: 0 0 0 10px; }
 .sets-links span { display: block; float: left; }
 a { color: #0069d6; text-decoration: none; cursor: pointer; }
 a:hover { color: #00438a; text-decoration: none; }
-#image-details { display: none; }
-.icon-details-small { border: 1px solid #F0F0F0; margin-right: 10px; padding: 5px; vertical-align: top; }
+#icon-details { display: none; }
+#icon-details a { margin-right: 10px; }
+#icon-details a:active, #icon-details a:focus { outline: none; }
+.icon-details-small { border: 1px solid #F0F0F0; padding: 5px; vertical-align: top; }
 .icon-details-big { border: 1px solid #F0F0F0; padding: 2px; vertical-align: top; }
 hr { margin: 18px 0; border: 0; border-top: 1px solid #eee; border-bottom: 1px solid #fff; }
 #footer { color: #999; }
