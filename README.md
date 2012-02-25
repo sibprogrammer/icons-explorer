@@ -16,8 +16,8 @@ Here is the brief instructions on how to add a new icon set:
 
 * define short icon set name, which will be used (*icon-set*)
 * create icon set directory: mkdir -p icons/*icon-set*/16x16
-* edit build script and add: find_icons "./icons/*icon-set*/16x16" "*icon-set*IconsNames"
-* edit javascripts/application.js and add: createIcons(*icon-set*IconsNames, '#*icon-set*-icons', '*icon-set*', false);
+* edit build script and add: find_icons "./icons/*icon-set*/16x16" "*icon-set* IconsNames"
+* edit javascripts/application.js and add: createIcons(*icon-set* IconsNames, '#*icon-set*-icons', '*icon-set*', false);
 * edit templates/header.html and add the link for *icon-set* into sets-links div block
 * edit templates/footer.html and add the block for *icon-set* similar to others
 * run the build script: ./build
