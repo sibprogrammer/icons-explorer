@@ -7,7 +7,7 @@ function find_icons {
 
     echo -n "var $ICONS_VAR = [" >> index.html
     for FILE in $FILES; do
-        BASENAME=`basename $FILE | sed 's/.png//'`
+        BASENAME=`basename $FILE | sed 's/\.png$//'`
         echo -n "'$BASENAME'," >> index.html
     done 
     echo "''];" >> index.html
