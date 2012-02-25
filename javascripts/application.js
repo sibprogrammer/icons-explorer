@@ -38,6 +38,8 @@ $(function() {
     $('.icons').show();
     $('.icons').resize();
     $('#progress').hide();
+
+    document.location.hash = filterValue ? ('#search-' + filterValue) : '#';
   }
 
   $('#filter').on('keyup', function(e) {
@@ -64,4 +66,15 @@ $(function() {
 
     $('#icon-details').dialog({ modal: true, width: 250, resizable: false });
   });
+
+  (function() {
+    var hash = document.location.hash;
+    if (0 == hash.indexOf('#search-')) {
+      var filter = hash.substr('#search-'.length);
+      if ('' !== filter) {
+        $('#filter').val(filter);
+        searchHandler();
+      }
+    }
+  })();
 });
