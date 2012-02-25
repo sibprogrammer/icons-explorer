@@ -4,9 +4,11 @@
 
 Service is available at http://sibprogrammer.github.com/icons-explorer/
 
-Alternativly you can download the project's archive and use it immeditally with
+Also you can download the project's archive and use it immeditally with
 zero-time installation. Just extract the archive and open index.html in your 
 favorite browser.
+
+![Screenshot](https://github.com/sibprogrammer/icons-explorer/raw/master/screenshot.png)
 
 ## License
 
