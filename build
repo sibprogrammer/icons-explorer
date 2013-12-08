@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 function find_icons {
     local ICONS_DIR=$1
